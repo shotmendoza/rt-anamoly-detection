@@ -1,0 +1,8 @@
+FROM python:latest
+
+RUN mkdir src
+WORKDIR /src
+
+RUN pip install jupyter
+
+CMD ["jupyter", "notebook", "--no-browser", "--allow-root", "--ip=0.0.0.0", "--port=8080"]
